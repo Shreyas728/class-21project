@@ -21,16 +21,16 @@ function draw() {
   bullet.velocityX = speed;
  
 
-  if(wall.x-bullet.x<(bullet.width+wall.width)/2){
+  if(bullet.x>wall.x-50){
     
 var deformation = 0.5 * weight * speed * speed / thickness* thickness* thickness;
 bullet.velocityX = 0;
 if(deformation>10){
-bullet.shapeColor = "red";
+wall.shapeColor = "red";
 }
 
   if(deformation<10){
-    bullet.shapeColor = "green";
+    wall.shapeColor = "green";
     }
   }
   
